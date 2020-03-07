@@ -6,23 +6,23 @@ import { FaAlignRight } from 'react-icons/fa';
 
 import styled from '@emotion/styled';
 
-import Search from '../algolia/Search';
 import { MobileMenu1 } from '../menus/mobileMenu1';
 
-import Navlink from '../Links/Navlink';
-import links from '../../constants/navLinks';
-import DropDownMenu1 from '../Links/DropDownMenu1';
-import NoStyleLink from '../Links/NoStyleLink';
-
 const Header = styled.header`
+  margin-top: 2rem;
+  color: ${props => props.theme.colors.white};
   position: relative;
   padding: 1rem 0;
-  background: ${props => props.theme.colors.lightgrey};
+  background: transparent;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    padding: 3rem 0;
+  grid-template-columns: 1fr;
+
+  & img {
+    & .static {
+      position: absolute;
+      background: black;
+      display: none;
+    }
   }
 `;
 
@@ -33,20 +33,6 @@ const HeaderTop = styled.div`
   align-items: center;
 `;
 
-const HeaderSearch = styled.div`
-  padding: 3px 0;
-  grid-column: 1/-1;
-  margin: 0 auto;
-  width: 80%;
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    width: 90%;
-  }
-`;
-
-const HeaderNav = styled.div`
-  grid-column: 1/-1;
-  margin-bottom: 1rem;
-`;
 const LogoLink = styled(Link)`
   padding: 0;
   margin: 0;
@@ -54,7 +40,7 @@ const LogoLink = styled(Link)`
 const Logo = styled.span`
   & i {
     font-weight: bold;
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.white};
   }
   & ${LogoLink} {
     text-decoration: none !important;
@@ -65,38 +51,8 @@ const Logo = styled.span`
 
 const LogoSpan2 = styled.span``;
 
-const NavContainer = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    display: none;
-  }
-`;
-
 const BurgerIcon = styled(FaAlignRight)`
   cursor: pointer;
-  @media (min-width: ${props => props.theme.screenSize.mobileL}) {
-    display: none;
-  }
-`;
-
-const Tagline = styled.div`
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  align-items: center;
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    margin-top: 1rem;
-  }
-`;
-
-const CustomLink = styled(NoStyleLink)`
-  margin: 0 5px;
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const Nav = () => {
@@ -113,43 +69,17 @@ const Nav = () => {
           <Logo>
             <LogoLink to="/">
               <i>
-                <LogoSpan2>Aquasar</LogoSpan2>
+                <LogoSpan2>Zeitlify</LogoSpan2>
               </i>
             </LogoLink>
           </Logo>
-
           <BurgerIcon onClick={mobileMenuHandler} />
-
+          {/* <img className="static" src={cloud} alt="Otter dancing with a fish" /> */}
           <MobileMenu1
             display={mobileMenuOpen.toString()}
             mobileMenuHandler={mobileMenuHandler}
           />
         </HeaderTop>
-
-        <HeaderNav>
-          <Tagline>
-            <CustomLink to="/web-development">WEB DEVELOPMENT</CustomLink> |
-            <CustomLink to="/seo">SEO</CustomLink> |
-            <CustomLink to="/digital-ads">DIGITAL ADS</CustomLink>
-          </Tagline>
-
-          <NavContainer>
-            {links.map(link => (
-              <Navlink
-                key={link.path}
-                activeClassName="currentPage"
-                to={link.path}
-              >
-                {link.text}
-              </Navlink>
-            ))}
-            <DropDownMenu1 />
-          </NavContainer>
-        </HeaderNav>
-
-        <HeaderSearch>
-          <Search />
-        </HeaderSearch>
       </Header>
     </>
   );

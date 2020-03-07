@@ -5,7 +5,6 @@ const H1 = styled.h1`
 
   color: ${props => props.theme.colors.black};
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    text-align: center;
     font-size: 3.4rem;
   }
 `;

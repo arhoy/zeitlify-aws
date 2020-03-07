@@ -5,7 +5,7 @@ require('dotenv').config({
 // Define site URL here
 let URL;
 if (process.env.NODE_ENV === 'production') {
-  URL = 'https://aquasar.io';
+  URL = 'https://zeitlify.netlify.com';
 } else {
   URL = 'http://localhost:8000';
 }
@@ -14,10 +14,9 @@ const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
-    title: 'Aquasar Inc - Helping Businesses Grow Online',
-    titleTemplate: 'Web Development SEO and Digital Ads in Edmonton Alberta',
-    description:
-      'Aquasar Inc is a web development, SEO and digital Ads consulting company in Edmonton, AB. We help businesses grow online to reach and exceed their business goals',
+    title: 'Zeitlify - Automation Platform',
+    titleTemplate: 'Zeitlify Sample Project',
+    description: 'At Zeilify we strive for automation',
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
     image: '/default.png',

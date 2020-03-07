@@ -12,9 +12,9 @@ import Icon from '../../../images/prism.svg';
 
 const theme = {
   colors: {
-    primary: 'rgb(92, 52, 145)',
-    primaryDark: 'rgb(63, 3, 122)',
-    primaryLight: 'rgb(148, 103, 206)',
+    primary: 'rgb(22, 61, 120)',
+    primaryDark: '#002F74',
+    primaryLight: '#5196FF',
     primaryVeryLight: 'rgb(232, 213, 250)',
     primaryTransparent: 'rgba(92, 52, 145,0.2)',
     secondary: 'rgb(24, 163, 201)',
@@ -43,6 +43,7 @@ const theme = {
     eightHundred: '800px',
     nineHundred: '900px',
     oneThousand: '1000px',
+    twoThousand: '2000px',
     fourTwentyFive: '425px',
   },
 };

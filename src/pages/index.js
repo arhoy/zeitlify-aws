@@ -1,48 +1,42 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import Layout from '../components/layouts/Layout';
-import SEO from '../hooks/SEO';
-import Insta from '../components/Insta';
-
+import BackgroundSvg from '../components/svg/backgroundSvg';
+import { HeroBlurb } from '../components/home/HeroBlurb';
 import { Section } from '../components/reusableStyles/sections/Sections';
-import { AboutMe } from '../components/home/AboutMe';
-import { Portfolio } from '../components/home/Portfolio';
-import { LatestArticles } from '../components/home/LatestArticles';
-import { LatestBlogs } from '../components/home/LatestBlogs';
+import Companies from '../components/home/Companies';
 
-import { Companies } from '../components/home/Companies';
-import Services from '../components/home/Services';
-import Platforms from '../components/home/Platforms';
-import { ContactBoxForm } from '../components/forms/ContactBoxForm';
+const BackgroundSvgContainer = styled.div`
+  position: absolute;
 
-export default () => {
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+`;
+
+const CustomSection = styled.div`
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+  display: grid;
+  justify-content: center;
+`;
+
+const IndexPage = () => {
   return (
-    <Layout backgroundLayer={true}>
-      <SEO
-        title="Web Development, SEO and Digital Ads in Edmonton AB | Aquasar Inc"
-        description="Aquasar Inc specializes in Web Development, SEO and Digital Ads. Helping customers with their online business, ecommerce websites, SEO and Digital Ads. Delivering exceptional work and affordable prices. Check out our latest portfolios, services, articles and blogs. We want to help you succeed and grow your website and business online"
-      />
-
-      <AboutMe />
-
-      <Companies />
-
-      <Services />
-
-      <Platforms />
-
-      <Portfolio />
-
-      <LatestArticles />
-
-      <LatestBlogs />
-
-      <Section>
-        <ContactBoxForm title={'Leave Us A Message'} />
-      </Section>
-      <Section>
-        <Insta />
-      </Section>
+    <Layout full={true}>
+      <BackgroundSvgContainer>
+        <BackgroundSvg />
+      </BackgroundSvgContainer>
+      <CustomSection>
+        <HeroBlurb />
+      </CustomSection>
+      <CustomSection>
+        <Companies />
+      </CustomSection>
     </Layout>
   );
 };
+
+export default IndexPage;

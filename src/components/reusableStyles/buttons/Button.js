@@ -40,7 +40,7 @@ const ButtonSweepToRight = styled.button`
   padding: 1rem 2rem;
   font-weight: bold;
   text-align: center;
-  background: ${props => props.theme.colors.lightgrey};
+  background: ${props => props.theme.colors.primaryLight};
   display: inline-block;
   cursor: pointer;
   vertical-align: middle;
@@ -54,12 +54,13 @@ const ButtonSweepToRight = styled.button`
   &::before {
     content: '';
     position: absolute;
+
     z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.primaryDark};
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
