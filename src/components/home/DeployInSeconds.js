@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import NetlifyBlob1 from '../reusableStyles/cards/netlifyCards/NetlifyBlob1';
-import { Section } from '../reusableStyles/sections/Sections';
+import {
+  Section,
+  SectionWhiteToGrey,
+} from '../reusableStyles/sections/Sections';
 import { H2 } from '../reusableStyles/typography/Typography';
 import NetlifyBlob2 from '../reusableStyles/cards/netlifyCards/NetlifyBlob2';
 import NetlifyBlob3 from '../reusableStyles/cards/netlifyCards/NetlifyBlob3';
@@ -29,14 +32,14 @@ const H2Centered = styled(H2)`
 
 const DeployInSeconds = () => {
   return (
-    <Section>
+    <SectionWhiteToGrey>
       <H2Centered> Instant Feedback Loop</H2Centered>
       <Container>
         <NetlifyBlob1 />
         <NetlifyBlob2 />
         <NetlifyBlob3 />
       </Container>
-    </Section>
+    </SectionWhiteToGrey>
   );
 };
 export default DeployInSeconds;

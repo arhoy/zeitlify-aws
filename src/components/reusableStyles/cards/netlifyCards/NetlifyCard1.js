@@ -75,7 +75,6 @@ const Button = styled(ButtonSweepToRight)`
 `;
 
 const NetlifyCard1 = ({ title, subtitle, blurb, link, linkURL, picture }) => {
-  console.log('Pictures is ', picture);
   return (
     <Container>
       <PictureContainer>

@@ -52,9 +52,30 @@ const ContainerCenterFlex = styled.div`
   align-items: center;
 `;
 
+const SectionWhiteToGrey = styled(SectionGrey)`
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.colors.white} 0%,
+    rgba(248, 248, 248, 1) 40%,
+    rgba(246, 246, 246, 1) 60%,
+    ${props => props.theme.colors.lightgrey} 100%
+  );
+`;
+
+const SectionGreyToWhite = styled(SectionGrey)`
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.colors.lightgrey} 0%,
+    rgba(246, 246, 246, 1) 47%,
+    ${props => props.theme.colors.white} 100%
+  );
+`;
+
 export {
   Section,
   SectionGrey,
+  SectionWhiteToGrey,
+  SectionGreyToWhite,
   SectionPrimaryTransparent,
   TopSection,
   ProductPageTopSection,

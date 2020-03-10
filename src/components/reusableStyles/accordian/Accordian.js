@@ -46,7 +46,6 @@ const Text = styled.p`
 const Accordian = ({ title, text, height }) => {
   const [open, setOpen] = useState(false);
   const buttonClick = () => {
-    console.log('I was clicked', open);
     setOpen(prev => !prev);
   };
   return (

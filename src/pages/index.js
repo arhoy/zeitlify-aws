@@ -14,6 +14,7 @@ import GoBeyondStatic from '../components/home/GoBeyondStatic/GoBeyondStatic';
 import { BetterWay } from '../components/home/BettterWay/BetterWay';
 import NetlifyCard2 from '../components/reusableStyles/cards/netlifyCards/NetlifyCard2';
 import TwitterSectiion from '../components/home/TwitterSection/TwitterSection';
+import ReadyToTry from '../components/home/ReadyToTry';
 
 export const query = graphql`
   {
@@ -105,6 +106,8 @@ const IndexPage = ({ data }) => {
       <Section style={{ paddingTop: '3rem' }}>
         <TwitterSectiion />
       </Section>
+
+      <ReadyToTry />
     </Layout>
   );
 };

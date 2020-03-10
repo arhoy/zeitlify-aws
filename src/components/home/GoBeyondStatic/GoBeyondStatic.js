@@ -1,7 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import { Section } from '../../reusableStyles/sections/Sections';
+import {
+  Section,
+  SectionGreyToWhite,
+} from '../../reusableStyles/sections/Sections';
 
 import { H2 } from '../../reusableStyles/typography/Typography';
 import Card from './Card';
@@ -45,7 +48,7 @@ const GoBeyondStatic = () => {
   `);
 
   return (
-    <Section>
+    <SectionGreyToWhite>
       <H2Centered> Go Above and Beyond</H2Centered>
       <CardContainer>
         <Card
@@ -65,7 +68,7 @@ const GoBeyondStatic = () => {
           fluid={data.image3.childImageSharp.fluid}
         />
       </CardContainer>
-    </Section>
+    </SectionGreyToWhite>
   );
 };
 

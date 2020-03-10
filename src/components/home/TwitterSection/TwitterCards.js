@@ -7,9 +7,8 @@ import { FaTwitter } from 'react-icons/fa';
 const Container = styled.div`
   border-radius: 8px;
   color: rgba(14, 30, 37, 0.8);
-  -webkit-box-shadow: 10px 10px 16px -8px rgba(240, 240, 240, 1);
-  -moz-box-shadow: 10px 10px 16px -8px rgba(240, 240, 240, 1);
-  box-shadow: 10px 10px 16px -8px rgba(240, 240, 240, 1);
+  -webkit-box-shadow: 0px 0px 16px 2px rgba(232, 255, 233, 0.79);
+  box-shadow: 0px 0px 16px 2px rgba(232, 255, 233, 0.79);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;

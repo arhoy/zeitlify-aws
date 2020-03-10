@@ -1,25 +1,38 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Img from 'gatsby-image';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 30rem;
+
+  margin: 1rem;
+  @media (max-width: ${props => props.theme.screenSize.oneThousand}) {
+    max-width: 40rem;
+    margin: 2rem 1rem;
+  }
 `;
 
 const Title = styled.h4`
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 `;
 
 const Blurb = styled.p`
   font-weight: 300;
+  font-size: 1.6rem;
 `;
 
-export const Card = ({ title, blurb }) => {
+const StyledImage = styled(Img)`
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+`;
+
+export const Card = ({ title, blurb, fixed }) => {
+  console.log('what the fuck', fixed);
   return (
     <Container>
+      <StyledImage fixed={fixed} />
       <Title>{title}</Title>
       <Blurb> {blurb} </Blurb>
     </Container>

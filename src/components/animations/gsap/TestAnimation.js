@@ -91,8 +91,6 @@ const TestAnimation = () => {
 
     master.add('circleIntroStart');
     master.add(circleIntro(), '-=2');
-
-    console.log(master.duration());
   }, []);
 
   const clickHandler = () => {

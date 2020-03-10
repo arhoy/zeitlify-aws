@@ -9,17 +9,21 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    flex-direction: ${props => (props.reverse ? 'column' : 'column-reverse')};
+  }
 `;
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin: 0 2rem;
+  margin: 1rem 2rem;
 `;
 
 const ImageContainer = styled.div`
-  margin: 0 2rem;
+  margin: 1rem 2rem;
 `;
 
 const Title = styled.h4`
@@ -32,6 +36,10 @@ const StyledImg = styled(Img)`
   width: 15rem;
   height: 15rem;
   object-fit: cover;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    width: 20rem;
+    height: 20rem;
+  }
 `;
 
 const Blurb = styled.div`
@@ -41,7 +49,7 @@ const Blurb = styled.div`
 const Card = ({ title, blurb, fluid, reverse }) => {
   if (reverse) {
     return (
-      <Container>
+      <Container reverse={reverse}>
         <ImageContainer>
           <StyledImg fluid={fluid} />
         </ImageContainer>
