@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-
 import { Link } from 'gatsby';
-
 import { FaAlignRight } from 'react-icons/fa';
-
 import styled from '@emotion/styled';
 
 import { MobileMenu1 } from '../menus/mobileMenu1';

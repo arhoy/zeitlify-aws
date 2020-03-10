@@ -5,9 +5,15 @@ import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
+// React Slick CSS
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 // real global scss styles
 import '../../scss/main.scss';
+
 import Footer from './Footer';
+
 import Icon from '../../../images/prism.svg';
 
 const theme = {
@@ -21,10 +27,11 @@ const theme = {
     lightgrey: 'rgb(240,240,240)',
     lightgrey2: 'rgb(224, 217, 217)',
     white: '#fff',
+    whiteTrans9: 'rgba(255,255,255,0.9)',
     black: '#1a1a1a',
     blackTransparent: 'rgba(41, 43, 46, 0.4)',
     blackTransparent2: 'rgba(41, 43, 46, 0.7)',
-    grey: `#CCC1C1`,
+    grey: `#7D8589`,
     darkgrey: 'rgb(109, 109, 109)',
     red: 'rgb(218, 18, 31)',
     redDark: '#D10000',
@@ -42,7 +49,7 @@ const theme = {
     mobileVS: '300px',
     eightHundred: '800px',
     nineHundred: '900px',
-    oneThousand: '1000px',
+    oneThousandAndFifty: '1050px',
     twoThousand: '2000px',
     fourTwentyFive: '425px',
   },

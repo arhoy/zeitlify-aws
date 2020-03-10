@@ -5,7 +5,6 @@ import { ButtonSweepToRight } from '../reusableStyles/buttons/Button';
 
 const Container = styled.div`
   color: ${props => props.theme.colors.white};
-  margin: 0 auto;
   max-width: 60rem;
   padding: 0 2rem;
   position: relative;

@@ -29,10 +29,10 @@ const TextBox2 = styled.div`
 `;
 
 const Hero = () => {
-  const { image } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "hero.jpeg" }) {
-        sharp: childImageSharp {
+        childImageSharp {
           fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid_withWebp
           }
@@ -42,7 +42,7 @@ const Hero = () => {
   `);
 
   return (
-    <ImageBackground fluid={image.sharp.fluid} fadeIn="soft">
+    <ImageBackground fluid={data.image.childImageSharp.fluid} fadeIn="soft">
       <TextBox>Built Using Gatsby</TextBox>
       <TextBox2>With You in Mind</TextBox2>
     </ImageBackground>

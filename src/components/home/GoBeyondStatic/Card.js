@@ -1,0 +1,69 @@
+import React from 'react';
+import Img from 'gatsby-image';
+
+import styled from '@emotion/styled';
+
+const Container = styled.div`
+  max-width: 80rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 2rem;
+`;
+
+const ImageContainer = styled.div`
+  margin: 0 2rem;
+`;
+
+const Title = styled.h4`
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+`;
+
+const StyledImg = styled(Img)`
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+`;
+
+const Blurb = styled.div`
+  color: ${props => props.theme.colors.grey};
+`;
+
+const Card = ({ title, blurb, fluid, reverse }) => {
+  if (reverse) {
+    return (
+      <Container>
+        <ImageContainer>
+          <StyledImg fluid={fluid} />
+        </ImageContainer>
+        <ContentContainer>
+          <Title>{title}</Title>
+          <Blurb>{blurb}</Blurb>
+        </ContentContainer>
+      </Container>
+    );
+  } else {
+    return (
+      <Container>
+        <ContentContainer>
+          <Title>{title}</Title>
+          <Blurb>{blurb}</Blurb>
+        </ContentContainer>
+        <ImageContainer>
+          <StyledImg fluid={fluid} />
+        </ImageContainer>
+      </Container>
+    );
+  }
+};
+
+export default Card;

@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.21 13.04">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 12px;
+        font-family: MyriadPro-Regular, Myriad Pro;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #666161;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 10.04)">mi<tspan class="cls-2" x="12.82" y="0">n</tspan><tspan x="19.43" y="0">tr st</tspan></text>
+  <rect class="cls-3" x="28.06" y="2.99" width="1" height="5"/>
+  <circle class="cls-3" cx="28.56" cy="9.2" r="0.71"/>
+</svg>
