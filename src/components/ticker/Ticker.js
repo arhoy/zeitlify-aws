@@ -10,31 +10,11 @@ import mintrist from '../../../images/svg/mintrist.svg';
 
 const CompanyImage = styled.img`
   width: 10rem;
-  margin: 2rem;
+  height: 100%;
+  margin-right: 1.5rem;
 `;
 
-const TickerContainer = styled(Ticker)`
-  position: relative;
-  &::after,
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2vw;
-  }
-
-  &::before {
-    left: 0;
-    background: linear-gradient(to right, white, transparent);
-  }
-
-  &::after {
-    right: 0;
-    background: linear-gradient(to right, white, transparent);
-  }
-`;
+const TickerContainer = styled(Ticker)``;
 
 const MyCompanyTicker = () => {
   const [pageIsVisible, setPageIsVisible] = useState(true);

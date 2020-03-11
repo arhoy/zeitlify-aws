@@ -6,7 +6,7 @@ import Layout from '../components/layouts/Layout';
 import { HeroBlurb } from '../components/home/HeroBlurb';
 
 import Companies from '../components/home/Companies';
-import BackgroundSvg from '../components/svg/BackgroundSvg';
+
 import { Section } from '../components/reusableStyles/sections/Sections';
 import NetlifyCard1 from '../components/reusableStyles/cards/netlifyCards/NetlifyCard1';
 import DeployInSeconds from '../components/home/DeployInSeconds';
@@ -16,12 +16,22 @@ import NetlifyCard2 from '../components/reusableStyles/cards/netlifyCards/Netlif
 import TwitterSectiion from '../components/home/TwitterSection/TwitterSection';
 import ReadyToTry from '../components/home/ReadyToTry';
 
+import backgroundImage from '../../images/svg/mywave.svg';
+
 export const query = graphql`
   {
     seo: file(relativePath: { eq: "seo/contact.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1000) {
           src
+        }
+      }
+    }
+
+    hero: file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 2000) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -37,11 +47,18 @@ export const query = graphql`
 
 const BackgroundSvgContainer = styled.div`
   position: absolute;
-
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 70vh;
+  z-index: -1;
   top: 0;
   left: 0;
-  overflow: hidden;
-  z-index: -1;
+
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    height: 60vh;
+  }
 `;
 
 const HeroBlurbSection = styled.div`
@@ -65,11 +82,10 @@ const CustomSection = styled.div`
 `;
 
 const IndexPage = ({ data }) => {
+  console.log('data', data.hero.childImageSharp.fluid);
   return (
     <Layout full={true}>
-      <BackgroundSvgContainer>
-        <BackgroundSvg />
-      </BackgroundSvgContainer>
+      <BackgroundSvgContainer />
       <HeroBlurbSection>
         <HeroBlurb />
       </HeroBlurbSection>

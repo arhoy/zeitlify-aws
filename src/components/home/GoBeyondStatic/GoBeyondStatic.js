@@ -1,10 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import {
-  Section,
-  SectionGreyToWhite,
-} from '../../reusableStyles/sections/Sections';
+import { SectionGreyToWhite } from '../../reusableStyles/sections/Sections';
 
 import { H2 } from '../../reusableStyles/typography/Typography';
 import Card from './Card';

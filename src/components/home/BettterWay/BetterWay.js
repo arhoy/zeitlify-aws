@@ -81,8 +81,6 @@ export const BetterWay = () => {
     }
   `);
 
-  console.log('data', data.image1.childImageSharp.fixed);
-
   return (
     <Section>
       <H2Centered> A Better Way to Automate </H2Centered>

@@ -29,7 +29,6 @@ const StyledImage = styled(Img)`
 `;
 
 export const Card = ({ title, blurb, fixed }) => {
-  console.log('what the fuck', fixed);
   return (
     <Container>
       <StyledImage fixed={fixed} />

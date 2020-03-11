@@ -75,20 +75,16 @@ const StyledLink = styled(NoStyleLink)`
   width: 100%;
   color: ${props => props.theme.colors.black};
   padding: 0 1rem;
-  background-image: linear-gradient(
-    110deg,
-    transparent,
-    transparent 50%,
-    #eee 0
-  );
+
   transition: all 0.25s;
-  background-size: 235%;
-  margin: 1.5rem 0;
+
   text-align: right;
   &:hover {
-    background-position: 100%;
-    -webkit-transform: translateX(0.5rem);
-    transform: translateX(0.5rem);
+    background-image: linear-gradient(
+      0deg,
+      ${props => props.theme.colors.lightgrey} 50%,
+      transparent 50%
+    );
   }
 `;
 
@@ -103,27 +99,15 @@ export const MobileMenu1 = ({ mobileMenuHandler, display }) => {
 
         <LinkContainerUl>
           <LinkWrapper>
-            {' '}
-            <StyledLink to="/"> Home </StyledLink>{' '}
+            <StyledLink to="/about"> About </StyledLink>
           </LinkWrapper>
           <LinkWrapper>
-            {' '}
-            <StyledLink to="/portfolio"> Portfolio </StyledLink>{' '}
+            <StyledLink to="/services"> Services </StyledLink>
           </LinkWrapper>
           <LinkWrapper>
-            {' '}
-            <StyledLink to="/articles"> Articles </StyledLink>{' '}
-          </LinkWrapper>
-          <LinkWrapper>
-            {' '}
-            <StyledLink to="/pricing"> Pricing </StyledLink>{' '}
-          </LinkWrapper>
-          <LinkWrapper>
-            {' '}
-            <StyledLink to="/about"> About </StyledLink>{' '}
+            <StyledLink to="/blog"> Blog </StyledLink>
           </LinkWrapper>
           <LinkWrapper style={{ borderBottom: 'none' }}>
-            {' '}
             <StyledLink to="/contact"> Contact </StyledLink>{' '}
           </LinkWrapper>
         </LinkContainerUl>

@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import NetlifyBlob1 from '../reusableStyles/cards/netlifyCards/NetlifyBlob1';
-import {
-  Section,
-  SectionWhiteToGrey,
-} from '../reusableStyles/sections/Sections';
+import { SectionWhiteToGrey } from '../reusableStyles/sections/Sections';
 import { H2 } from '../reusableStyles/typography/Typography';
 import NetlifyBlob2 from '../reusableStyles/cards/netlifyCards/NetlifyBlob2';
 import NetlifyBlob3 from '../reusableStyles/cards/netlifyCards/NetlifyBlob3';

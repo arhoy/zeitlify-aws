@@ -10,7 +10,7 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: ${props => props.theme.colors.primaryDark};
 `;
 

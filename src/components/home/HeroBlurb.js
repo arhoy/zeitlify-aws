@@ -5,10 +5,22 @@ import { ButtonSweepToRight } from '../reusableStyles/buttons/Button';
 
 const Container = styled.div`
   color: ${props => props.theme.colors.white};
-  max-width: 60rem;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 2rem;
   position: relative;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+
+  @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
+    grid-template-columns: 1fr;
+  }
 `;
+
+const SubContainer = styled.div``;
 
 const HeadingContainer = styled.div``;
 
@@ -43,21 +55,25 @@ const CustomButton = styled(ButtonSweepToRight)`
 export const HeroBlurb = () => {
   return (
     <Container>
-      <HeadingContainer>
-        <Heading>
-          <span className="primary"> Blazingly Fast Websites</span>
-          <span className="secondary">For Modern Web Developers</span>
-        </Heading>
-      </HeadingContainer>
-      <BlurbContainer>
-        <p>
-          Build, market and deploy with Zeitlify's complete package for modern
-          web projects
-        </p>
-      </BlurbContainer>
-      <CallToActionContainer>
-        <CustomButton to="/"> START FREE TRIAL </CustomButton>
-      </CallToActionContainer>
+      <SubContainer>
+        <HeadingContainer>
+          <Heading>
+            <span className="primary">Blazingly Fast Modern Automation</span>
+          </Heading>
+        </HeadingContainer>
+      </SubContainer>
+
+      <SubContainer>
+        <BlurbContainer>
+          <p>
+            Build, market and deploy with Zeitlify's complete package for modern
+            web projects
+          </p>
+        </BlurbContainer>
+        <CallToActionContainer>
+          <CustomButton to="/"> START FREE TRIAL </CustomButton>
+        </CallToActionContainer>
+      </SubContainer>
     </Container>
   );
 };

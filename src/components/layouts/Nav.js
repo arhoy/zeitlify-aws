@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
+
 import { Link } from 'gatsby';
+
 import { FaAlignRight } from 'react-icons/fa';
+
 import styled from '@emotion/styled';
 
 import { MobileMenu1 } from '../menus/mobileMenu1';
 
-const Header = styled.header`
-  margin-top: 2rem;
-  color: ${props => props.theme.colors.white};
-  position: relative;
-  padding: 1rem 0;
-  background: transparent;
-  display: grid;
-  grid-template-columns: 1fr;
+import NoStyleLink from '../Links/NoStyleLink';
 
-  & img {
-    & .static {
-      position: absolute;
-      background: black;
-      display: none;
-    }
-  }
+import '../../scss/menu_hovers/menuhover.scss';
+
+const Header = styled.header`
+  position: relative;
+  padding: 3rem 0;
+  background: transparent;
+  color: ${props => props.theme.colors.white};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 const HeaderTop = styled.div`
@@ -35,21 +33,68 @@ const LogoLink = styled(Link)`
   margin: 0;
 `;
 const Logo = styled.span`
-  & i {
-    font-weight: bold;
-    color: ${props => props.theme.colors.white};
-  }
   & ${LogoLink} {
     text-decoration: none !important;
+    font-weight: bold;
     font-size: 3rem;
-    line-height: 2.4rem;
+    letter-spacing: 4px;
+    color: ${props => props.theme.colors.white};
   }
 `;
 
-const LogoSpan2 = styled.span``;
+const LogoSpan2 = styled.span`
+  font-size: 4.5rem;
+`;
 
 const BurgerIcon = styled(FaAlignRight)`
   cursor: pointer;
+  color: inherit;
+  font-size: 3rem;
+  @media (min-width: ${props => props.theme.screenSize.mobileL}) {
+    display: none;
+  }
+`;
+
+const MenuLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  align-items: center;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    display: none;
+  }
+`;
+
+const CustomLink = styled(NoStyleLink)`
+  overflow: hidden;
+  display: inline;
+  position: relative;
+
+  font-size: 2rem;
+  color: ${props => props.theme.colors.white};
+  margin: 1rem;
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: ${props => props.theme.colors.white};
+    height: 2px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
 `;
 
 const Nav = () => {
@@ -60,25 +105,37 @@ const Nav = () => {
   };
 
   return (
-    <>
-      <Header>
-        <HeaderTop>
-          <Logo>
-            <LogoLink to="/">
-              <i>
-                <LogoSpan2>Zeitlify</LogoSpan2>
-              </i>
-            </LogoLink>
-          </Logo>
-          <BurgerIcon onClick={mobileMenuHandler} />
-          {/* <img className="static" src={cloud} alt="Otter dancing with a fish" /> */}
-          <MobileMenu1
-            display={mobileMenuOpen.toString()}
-            mobileMenuHandler={mobileMenuHandler}
-          />
-        </HeaderTop>
-      </Header>
-    </>
+    <Header>
+      <HeaderTop>
+        <Logo>
+          <LogoLink to="/">
+            <LogoSpan2>Z</LogoSpan2>eitlify
+          </LogoLink>
+        </Logo>
+
+        <MenuLinks>
+          <CustomLink className="underline" to="/about">
+            About
+          </CustomLink>
+          <CustomLink className="underline" to="/services">
+            Services
+          </CustomLink>
+          <CustomLink className="underline" to="/blog">
+            Blog
+          </CustomLink>
+          <CustomLink className="underline" to="/contact">
+            Contact
+          </CustomLink>
+        </MenuLinks>
+
+        <BurgerIcon onClick={mobileMenuHandler} />
+
+        <MobileMenu1
+          display={mobileMenuOpen.toString()}
+          mobileMenuHandler={mobileMenuHandler}
+        />
+      </HeaderTop>
+    </Header>
   );
 };
 

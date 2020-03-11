@@ -6,12 +6,16 @@ import Ticker from '../ticker/Ticker';
 
 const Container = styled.div``;
 
-const Title = styled(H2)``;
+const Title = styled(H2)`
+  text-align: center;
+
+  padding: 2rem;
+`;
 
 const Companies = () => {
   return (
     <Container>
-      <Title>Thousands of Companies Trust Zeitlify</Title>
+      <Title>Thousands Trust Zeitlify</Title>
       <Ticker />
     </Container>
   );
