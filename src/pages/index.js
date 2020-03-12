@@ -3,18 +3,17 @@ import styled from '@emotion/styled';
 
 import Layout from '../components/layouts/Layout';
 
-import { HeroBlurb } from '../components/home/HeroBlurb';
-
-import Companies from '../components/home/Companies';
-
 import { Section } from '../components/reusableStyles/sections/Sections';
 import NetlifyCard1 from '../components/reusableStyles/cards/netlifyCards/NetlifyCard1';
-import DeployInSeconds from '../components/home/DeployInSeconds';
-import GoBeyondStatic from '../components/home/GoBeyondStatic/GoBeyondStatic';
-import { BetterWay } from '../components/home/BettterWay/BetterWay';
+
 import NetlifyCard2 from '../components/reusableStyles/cards/netlifyCards/NetlifyCard2';
-import TwitterSectiion from '../components/home/TwitterSection/TwitterSection';
-import ReadyToTry from '../components/home/ReadyToTry';
+import TwitterSectiion from '../components/_homePage/TwitterSection/TwitterSection';
+import ReadyToTry from '../components/_homePage/ReadyToTry';
+import DeployInSeconds from '../components/_homePage/DeployInSeconds';
+import GoBeyondStatic from '../components/_homePage/GoBeyondStatic/GoBeyondStatic';
+import { BetterWay } from '../components/_homePage/BettterWay/BetterWay';
+import { HeroBlurb } from '../components/_homePage/HeroBlurb';
+import Companies from '../components/_homePage/Companies';
 
 import backgroundImage from '../../images/svg/mywave.svg';
 

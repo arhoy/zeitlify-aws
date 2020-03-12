@@ -15,7 +15,7 @@ import '../../scss/menu_hovers/menuhover.scss';
 const Header = styled.header`
   position: relative;
   padding: 3rem 0;
-  background: transparent;
+  background: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.white};
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -40,6 +40,11 @@ const Container1200 = styled.div`
   margin: 0 auto;
 `;
 
+const Container1000 = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+`;
+
 const Container800 = styled.div`
   max-width: 800px;
   margin: 0 auto;
@@ -80,6 +85,7 @@ export {
   TopSection,
   ProductPageTopSection,
   Container1200,
+  Container1000,
   Container800,
   ContainerCenterFlex,
 };

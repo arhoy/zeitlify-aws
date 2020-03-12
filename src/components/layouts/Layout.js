@@ -18,7 +18,7 @@ import Icon from '../../../images/prism.svg';
 
 const theme = {
   colors: {
-    primary: 'rgb(22, 61, 120)',
+    primary: '#244F9B',
     primaryDark: '#002F74',
     primaryLight: '#5196FF',
     primaryVeryLight: 'rgb(232, 213, 250)',

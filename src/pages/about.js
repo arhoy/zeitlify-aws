@@ -1,19 +1,44 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
-import styled from '@emotion/styled';
-import BackgroundSvg from '../components/home/BettterWay/BackgroundSvg';
+import Layout from '../components/layouts/Layout';
+import { Section0 } from '../components/_aboutPage/Section0/Section0';
+import { Section1 } from '../components/_aboutPage/Section1/Section1';
+import { Section2 } from '../components/_aboutPage/Section2/Section2';
+import { Section3 } from '../components/_aboutPage/Section3/Section3';
+import { Section4 } from '../components/_aboutPage/Section4/Section4';
 
-const Section = styled.div`
-  background: red;
-  width: 100vw;
-  height: 100vh;
+export const query = graphql`
+  query {
+    aboutImage1: file(relativePath: { eq: "astronaut.png" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
 `;
 
-const AboutPage = () => {
+const AboutPage = ({ data }) => {
   return (
-    <Section>
-      <BackgroundSvg />
-    </Section>
+    <Layout full={true}>
+      <Fade bottom>
+        <Section0 fluid={data.aboutImage1.childImageSharp.fluid} />
+      </Fade>
+      <Fade bottom>
+        <Section1 />
+      </Fade>
+      <Fade bottom>
+        <Section2 />
+      </Fade>
+      <Fade bottom>
+        <Section3 />
+      </Fade>
+      <Fade bottom>
+        <Section4 />
+      </Fade>
+    </Layout>
   );
 };
 
