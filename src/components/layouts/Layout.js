@@ -14,8 +14,6 @@ import '../../scss/main.scss';
 
 import Footer from './Footer';
 
-import Icon from '../../../images/prism.svg';
-
 const theme = {
   colors: {
     primary: '#244F9B',
@@ -120,7 +118,6 @@ const Layout = ({ children, full, backgroundLayer }) => {
 
           body {
             background: ${white};
-            background-image: ${backgroundLayer && `url(${Icon})`};
 
             overflow-x: hidden;
             width: 100%;

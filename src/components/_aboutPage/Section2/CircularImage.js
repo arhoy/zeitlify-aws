@@ -24,10 +24,10 @@ const Image = styled(Img)`
   border-radius: 50%;
 `;
 
-export const CircularImage = ({ fluid }) => {
+export const CircularImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "about/ela-musk.jpg" }) {
+      image1: file(relativePath: { eq: "_about/ela-musk.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp

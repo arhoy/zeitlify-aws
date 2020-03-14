@@ -48,42 +48,52 @@ const Grid6 = styled(Grid)`
 export const ImageGrid = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "about/ladder.jpg" }) {
+      image1: file(
+        relativePath: { eq: "_about/Section1/ImageGrid/ladder.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      image2: file(relativePath: { eq: "about/drone.jpg" }) {
+      image2: file(
+        relativePath: { eq: "_about/Section1/ImageGrid/drone.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      image3: file(relativePath: { eq: "about/code.jpg" }) {
+      image3: file(relativePath: { eq: "_about/Section1/ImageGrid/code.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      image4: file(relativePath: { eq: "about/robot.jpg" }) {
+      image4: file(
+        relativePath: { eq: "_about/Section1/ImageGrid/robot.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      image5: file(relativePath: { eq: "about/stevejobs.jpg" }) {
+      image5: file(
+        relativePath: { eq: "_about/Section1/ImageGrid/stevejobs.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      image6: file(relativePath: { eq: "about/tower.jpg" }) {
+      image6: file(
+        relativePath: { eq: "_about/Section1/ImageGrid/tower.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid_withWebp
@@ -93,7 +103,6 @@ export const ImageGrid = () => {
     }
   `);
 
-  console.log('data', data.image1.childImageSharp.fluid);
   return (
     <Container>
       <Grid1 fluid={data.image1.childImageSharp.fluid} />

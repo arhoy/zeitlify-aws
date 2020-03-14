@@ -1,21 +1,18 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import { graphql } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 
 import Layout from '../components/layouts/Layout';
 
-import { Section } from '../components/reusableStyles/sections/Sections';
-import NetlifyCard1 from '../components/reusableStyles/cards/netlifyCards/NetlifyCard1';
-
-import NetlifyCard2 from '../components/reusableStyles/cards/netlifyCards/NetlifyCard2';
-import TwitterSectiion from '../components/_homePage/TwitterSection/TwitterSection';
-import ReadyToTry from '../components/_homePage/ReadyToTry';
-import DeployInSeconds from '../components/_homePage/DeployInSeconds';
-import GoBeyondStatic from '../components/_homePage/GoBeyondStatic/GoBeyondStatic';
-import { BetterWay } from '../components/_homePage/BettterWay/BetterWay';
-import { HeroBlurb } from '../components/_homePage/HeroBlurb';
-import Companies from '../components/_homePage/Companies';
-
-import backgroundImage from '../../images/svg/mywave.svg';
+import { Section0 } from '../components/_homePage/Section0/Section0';
+import { Section1 } from '../components/_homePage/Section1/Section1';
+import { Section2 } from '../components/_homePage/Section2/Section2';
+import { Section3 } from '../components/_homePage/Section3/Section3';
+import { Section4 } from '../components/_homePage/Section4/Section4';
+import { Section5 } from '../components/_homePage/Section5/Section5';
+import { Section6 } from '../components/_homePage/Section6/Section6';
+import { Section7 } from '../components/_homePage/Section7/Section7';
+import { Section8 } from '../components/_homePage/Section8/Section8';
 
 export const query = graphql`
   {
@@ -44,85 +41,49 @@ export const query = graphql`
   }
 `;
 
-const BackgroundSvgContainer = styled.div`
-  position: absolute;
-  background-image: url(${backgroundImage});
-  background-size: cover;
-  background-position: bottom;
-  width: 100%;
-  height: 70vh;
-  z-index: -1;
-  top: 0;
-  left: 0;
-
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    height: 60vh;
-  }
-`;
-
-const HeroBlurbSection = styled.div`
-  min-height: 50vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 4rem 8rem;
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    padding: 0;
-    align-items: flex-start;
-    padding-top: 3rem;
-  }
-`;
-
-const CustomSection = styled.div`
-  padding-top: 6rem;
-  padding-bottom: 1rem;
-  display: grid;
-  justify-content: center;
-`;
-
 const IndexPage = ({ data }) => {
-  console.log('data', data.hero.childImageSharp.fluid);
   return (
     <Layout full={true}>
-      <BackgroundSvgContainer />
-      <HeroBlurbSection>
-        <HeroBlurb />
-      </HeroBlurbSection>
-      <CustomSection>
-        <Companies />
-      </CustomSection>
-      <Section>
-        <NetlifyCard1
-          title={`America's top middleout compressor delivers 10X faster`}
-          blurb={`Not only is Pied Piper launching faster sites, they are blowing their competitors away with blazing speed.`}
-          link={`Read More`}
-          linkURL="#"
-          picture={data.imageCard1.childImageSharp.fluid}
-        />
-      </Section>
-      {/* deploy in  section */}
-      <DeployInSeconds />
-      {/* go beyond  section */}
-      <GoBeyondStatic />
-      {/* go beyond static section */}
-      <BetterWay />
+      {/* Cover Section */}
+      <Section0 />
 
-      <Section>
-        <NetlifyCard2
-          title={`Work For Zeitlify`}
-          subtitle={`Help Make the World A Better Place`}
-          blurb={`If you are a developer or designer interested in working for us we would love to hear from you!`}
-          link={`Learn More`}
-          linkURL="#"
-          picture={data.imageCard1.childImageSharp.fluid}
-        />
-      </Section>
+      {/* Thousands Trust Us */}
+      <Section1 />
 
-      <Section style={{ paddingTop: '3rem' }}>
-        <TwitterSectiion />
-      </Section>
+      {/* News Cards Trust Us */}
+      <Fade bottom>
+        <Section2 fluid={data.imageCard1.childImageSharp.fluid} />
+      </Fade>
 
-      <ReadyToTry />
+      {/* instant feedback loop */}
+      <Fade bottom>
+        <Section3 />
+      </Fade>
+
+      {/* Go Above and Beyond */}
+      <Fade bottom>
+        <Section4 />
+      </Fade>
+
+      {/* go beyond static */}
+      <Fade bottom>
+        <Section5 />
+      </Fade>
+
+      {/* Work For Us Card */}
+      <Fade bottom>
+        <Section6 fluid={data.imageCard1.childImageSharp.fluid} />
+      </Fade>
+
+      {/* Twitter Section */}
+      <Fade bottom>
+        <Section7 />
+      </Fade>
+
+      {/* Ready to try this */}
+      <Fade bottom>
+        <Section8 />
+      </Fade>
     </Layout>
   );
 };

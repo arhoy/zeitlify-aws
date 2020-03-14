@@ -43,21 +43,25 @@ const TitleContainer = styled.div`
 export const Section4 = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "about/ladder.jpg" }) {
+      image1: file(
+        relativePath: { eq: "_about/Section1/ImageGrid/ladder.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 350) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      image2: file(relativePath: { eq: "about/drone.jpg" }) {
+      image2: file(
+        relativePath: { eq: "_about/Section1/ImageGrid/drone.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 350) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      image3: file(relativePath: { eq: "about/code.jpg" }) {
+      image3: file(relativePath: { eq: "_about/Section1/ImageGrid/code.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 350) {
             ...GatsbyImageSharpFluid_withWebp

@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 
 import Layout from '../components/layouts/Layout';
@@ -11,7 +12,7 @@ import { Section5 } from '../components/_aboutPage/Section5/Section5';
 
 export const query = graphql`
   query {
-    aboutImage1: file(relativePath: { eq: "tower.jpg" }) {
+    aboutImage1: file(relativePath: { eq: "_about/tower.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
