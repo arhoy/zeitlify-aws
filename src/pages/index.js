@@ -65,7 +65,7 @@ const IndexPage = ({ data }) => {
         <Section4 />
       </Fade>
 
-      {/* go beyond static */}
+      {/* Better Way to Automate */}
       <Fade bottom>
         <Section5 />
       </Fade>

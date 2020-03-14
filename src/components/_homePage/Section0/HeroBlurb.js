@@ -15,6 +15,7 @@ const Container = styled.div`
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+  padding-bottom: 10rem;
 
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
     grid-template-columns: 1fr;

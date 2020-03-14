@@ -6,10 +6,10 @@ import { Card } from './Card';
 import { H2 } from '../../reusableStyles/typography/Typography';
 import BackgroundSvg from './BackgroundSvg';
 import { ButtonSweepToRight } from '../../reusableStyles/buttons/Button';
+import { Section } from '../../reusableStyles/sections/Sections';
 
-const Section = styled.div`
+const CustomSection = styled(Section)`
   position: relative;
-  padding: 8rem 2rem;
 
   color: ${props => props.theme.colors.white};
   background: linear-gradient(
@@ -82,7 +82,7 @@ export const Section5 = () => {
   `);
 
   return (
-    <Section>
+    <CustomSection>
       <H2Centered> A Better Way to Automate </H2Centered>
       <Container>
         <Card
@@ -104,8 +104,7 @@ export const Section5 = () => {
       <ButtonContainer>
         <Button>Get Started Today</Button>
       </ButtonContainer>
-
       <BackgroundSvg />
-    </Section>
+    </CustomSection>
   );
 };
