@@ -14,6 +14,18 @@ const H2 = styled.h2`
   color: ${props => props.theme.colors.primaryDark};
 `;
 
+const H3 = styled.h3`
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  font-size: 3rem;
+  background-image: linear-gradient(
+    0deg,
+    ${props => props.theme.colors.secondaryVeryLight} 50%,
+    transparent 50%
+  );
+`;
+
 const A = styled.a`
   color: ${props => props.theme.colors.black};
   text-decoration: none;
@@ -37,4 +49,4 @@ const Span = styled.span``;
 
 const P = styled.p``;
 
-export { H1, H2, A, Li, Ul, Span, Bold, P };
+export { H1, H2, H3, A, Li, Ul, Span, Bold, P };

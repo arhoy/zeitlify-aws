@@ -1,4 +1,6 @@
 import React from 'react';
+import Img from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import styled from '@emotion/styled';
 
@@ -9,11 +11,8 @@ const Container = styled.div`
   grid-gap: 1rem;
 `;
 
-const Grid = styled.div`
-  background: ${props => props.theme.colors.red};
-  &:hover {
-    background: ${props => props.theme.colors.black};
-  }
+const Grid = styled(Img)`
+  object-fit: cover;
 `;
 
 const Grid1 = styled(Grid)`
@@ -47,14 +46,62 @@ const Grid6 = styled(Grid)`
 `;
 
 export const ImageGrid = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      image1: file(relativePath: { eq: "about/ladder.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image2: file(relativePath: { eq: "about/drone.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image3: file(relativePath: { eq: "about/code.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image4: file(relativePath: { eq: "about/robot.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image5: file(relativePath: { eq: "about/stevejobs.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image6: file(relativePath: { eq: "about/tower.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 3000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
+  console.log('data', data.image1.childImageSharp.fluid);
   return (
     <Container>
-      <Grid1></Grid1>
-      <Grid2></Grid2>
-      <Grid3></Grid3>
-      <Grid4></Grid4>
-      <Grid5></Grid5>
-      <Grid6></Grid6>
+      <Grid1 fluid={data.image1.childImageSharp.fluid} />
+      <Grid2 fluid={data.image2.childImageSharp.fluid} />
+      <Grid3 fluid={data.image3.childImageSharp.fluid} />
+      <Grid4 fluid={data.image4.childImageSharp.fluid} />
+      <Grid5 fluid={data.image5.childImageSharp.fluid} />
+      <Grid6 fluid={data.image6.childImageSharp.fluid} />
     </Container>
   );
 };

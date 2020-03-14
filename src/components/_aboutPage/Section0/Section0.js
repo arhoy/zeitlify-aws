@@ -6,13 +6,8 @@ import { H1 } from '../../reusableStyles/typography/Typography';
 
 const StyledH1 = styled(H1)`
   text-align: center;
-  font-size: 3rem;
-  & .redbold {
-    color: ${props => props.theme.colors.red};
-  }
-  & .greenbold {
-    color: ${props => props.theme.colors.green};
-  }
+  font-size: 4rem;
+  color: ${props => props.theme.colors.white};
 `;
 
 const CustomSection = styled(Section)`
@@ -36,7 +31,7 @@ export const Section0 = ({ fluid }) => {
     <CustomSection>
       <StyledHero2 img={fluid}>
         <Container800>
-          <StyledH1>MONKEY BUT</StyledH1>
+          <StyledH1>About Us</StyledH1>
         </Container800>
       </StyledHero2>
     </CustomSection>

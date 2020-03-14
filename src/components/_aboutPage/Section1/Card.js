@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { H3 } from '../../reusableStyles/typography/Typography';
 
 const Container = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const Title = styled.h3`
-  text-align: center;
 `;
 
 const Subtitle = styled.h4`
@@ -29,7 +26,7 @@ const Blurb = styled.div`
 export const Card = () => {
   return (
     <Container>
-      <Title>About Us</Title>
+      <H3>Our Story</H3>
       <Subtitle>Automation Refined</Subtitle>
       <Blurb>
         <p>

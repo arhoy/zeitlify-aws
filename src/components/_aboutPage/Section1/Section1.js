@@ -8,11 +8,12 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 4fr 6fr;
   grid-gap: 2rem;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-const SubContainer = styled.div`
-  border: 2px solid red;
-`;
+const SubContainer = styled.div``;
 
 export const Section1 = () => {
   return (

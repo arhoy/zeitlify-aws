@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { H3 } from '../../reusableStyles/typography/Typography';
 
 const Container = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const Title = styled.h3`
-  text-align: center;
 `;
 
 const Subtitle = styled.h4`
@@ -19,6 +16,7 @@ const Subtitle = styled.h4`
 
 const Blurb = styled.div`
   text-align: center;
+  max-width: 50rem;
   & p {
     color: ${props => props.theme.colors.grey};
     font-weight: 300;
@@ -29,7 +27,7 @@ const Blurb = styled.div`
 export const Card = () => {
   return (
     <Container>
-      <Title>Elong Musk</Title>
+      <H3>Ela Musk</H3>
       <Subtitle>CEO and Founder</Subtitle>
       <Blurb>
         <p>

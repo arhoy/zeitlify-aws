@@ -7,9 +7,13 @@ import { Blob } from './Blob';
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 6fr 6fr;
+  grid-template-columns: 6fr 4fr;
   align-items: center;
-  grid-gap: 2rem;
+  grid-column-gap: 4rem;
+  grid-row-gap: 1rem;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const SubContainer1 = styled.div`

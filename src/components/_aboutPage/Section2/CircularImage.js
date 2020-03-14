@@ -1,18 +1,23 @@
 import React from 'react';
-
+import Img from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => props.theme.colors.lightgrey};
+  background: linear-gradient(
+    to right bottom,
+    ${props => props.theme.colors.lightgrey},
+    ${props => props.theme.colors.white}
+  );
   height: 25rem;
   width: 25rem;
   margin: 0 auto;
 `;
 
-const Img = styled.div`
+const Image = styled(Img)`
   background: ${props => props.theme.colors.white};
   width: 15rem;
   height: 15rem;
@@ -20,9 +25,20 @@ const Img = styled.div`
 `;
 
 export const CircularImage = ({ fluid }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      image1: file(relativePath: { eq: "about/ela-musk.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
   return (
     <Container>
-      <Img fluid={fluid} />
+      <Image fluid={data.image1.childImageSharp.fluid} />
     </Container>
   );
 };

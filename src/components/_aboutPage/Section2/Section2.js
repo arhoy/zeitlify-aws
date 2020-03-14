@@ -1,14 +1,20 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Section, Container1000 } from '../../reusableStyles/sections/Sections';
+import {
+  Container1000,
+  SectionGrey,
+} from '../../reusableStyles/sections/Sections';
 
 import { Card } from './Card';
 import { CircularImage } from './CircularImage';
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 6fr 6fr;
+  grid-template-columns: 4fr 6fr;
   grid-gap: 2rem;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const SubContainer1 = styled.div`
@@ -21,7 +27,7 @@ const SubContainer2 = styled.div``;
 
 export const Section2 = () => {
   return (
-    <Section>
+    <SectionGrey>
       <Container1000>
         <Container>
           <SubContainer1>
@@ -32,6 +38,6 @@ export const Section2 = () => {
           </SubContainer2>
         </Container>
       </Container1000>
-    </Section>
+    </SectionGrey>
   );
 };

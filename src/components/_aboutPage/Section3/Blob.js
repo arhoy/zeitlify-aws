@@ -43,6 +43,7 @@ const TitleContainer = styled.div`
 const Title = styled.h4`
   font-size: 2rem;
   margin: 1rem 0;
+  text-align: center;
 `;
 
 const GitHubIcon = styled(FaGithub)`

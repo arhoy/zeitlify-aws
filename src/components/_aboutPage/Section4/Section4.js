@@ -1,19 +1,23 @@
 import React from 'react';
 
 import styled from '@emotion/styled';
-import { Section, Container1000 } from '../../reusableStyles/sections/Sections';
+import { graphql, useStaticQuery } from 'gatsby';
+
+import {
+  SectionGrey,
+  Container1000,
+} from '../../reusableStyles/sections/Sections';
 import { Card } from './Card';
-import { H2 } from '../../reusableStyles/typography/Typography';
+import { H3 } from '../../reusableStyles/typography/Typography';
 import { ButtonSweepToRight } from '../../reusableStyles/buttons/Button';
 
 const Container = styled(Container1000)`
   display: flex;
   justify-content: center;
-`;
-
-const StyledH2 = styled(H2)`
-  text-align: center;
-  margin-bottom: 3rem;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -29,18 +33,55 @@ const Button = styled(ButtonSweepToRight)`
   padding: 1.5rem 3rem;
   text-transform: uppercase;
 `;
+
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+`;
+
 export const Section4 = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      image1: file(relativePath: { eq: "about/ladder.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 350) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image2: file(relativePath: { eq: "about/drone.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 350) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image3: file(relativePath: { eq: "about/code.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 350) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
   return (
-    <Section>
-      <StyledH2> Our Three Pillars of Automation</StyledH2>
+    <SectionGrey>
+      <TitleContainer>
+        <H3> Our Three Pillars of Automation</H3>
+      </TitleContainer>
       <Container>
-        <Card />
-        <Card />
-        <Card />
+        <Card title={`Scalability`} fluid={data.image1.childImageSharp.fluid} />
+        <Card title={`Robustness`} fluid={data.image2.childImageSharp.fluid} />
+        <Card
+          title={`Adaptability`}
+          fluid={data.image3.childImageSharp.fluid}
+        />
       </Container>
       <ButtonContainer>
         <Button>Read More</Button>
       </ButtonContainer>
-    </Section>
+    </SectionGrey>
   );
 };
