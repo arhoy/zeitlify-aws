@@ -36,7 +36,8 @@ const CustomH1 = styled(H1)`
 
 const Blurb = styled.div`
   text-align: center;
-  font-weight: 300;
+  font-weight: 500;
+  font-size: 2rem;
   margin-top: 2rem;
 `;
 
@@ -48,6 +49,8 @@ const ButtonContainer = styled.div`
 
 const Button = styled(ButtonSweepToRight)`
   color: ${props => props.theme.colors.white};
+  font-weight: 700;
+  text-transform: uppercase;
 `;
 
 export const Section0 = () => {

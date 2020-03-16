@@ -86,14 +86,6 @@ export const Section5 = () => {
         >
           <Text2 />
         </Card>
-        <Card
-          title="Our Data Servers Are Ready"
-          blurb={`Our Data servers are ready for ddos and xss attacks on any network`}
-          fluid={data.image3.childImageSharp.fluid}
-          reverse={true}
-        >
-          <Text3 />
-        </Card>
       </CardContainer>
     </Section>
   );

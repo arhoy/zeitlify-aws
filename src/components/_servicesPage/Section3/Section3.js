@@ -2,7 +2,14 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 import { Section, Container1200 } from '../../reusableStyles/sections/Sections';
-import { LinkCard1, LinkCard2, LinkCard3 } from './LinkCards';
+import {
+  LinkCard1,
+  LinkCard2,
+  LinkCard3,
+  LinkCard4,
+  LinkCard5,
+  LinkCard6,
+} from './LinkCards';
 import { H2 } from '../../reusableStyles/typography/Typography';
 
 const CustomSection = styled(Section)`
@@ -14,6 +21,7 @@ const CustomSection = styled(Section)`
 const Container = styled(Container1200)`
   display: grid;
   grid-gap: 1rem;
+  justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   @media (max-width: ${props => props.theme.screenSize.oneThousand}) {
     grid-template-columns: repeat(2, 1fr);
@@ -53,9 +61,9 @@ export const Section3 = () => {
         <LinkCard1 />
         <LinkCard2 />
         <LinkCard3 />
-        <LinkCard1 />
-        <LinkCard2 />
-        <LinkCard3 />
+        <LinkCard4 />
+        <LinkCard5 />
+        <LinkCard6 />
       </Container>
     </CustomSection>
   );

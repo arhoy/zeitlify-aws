@@ -1,8 +1,15 @@
 import React from 'react';
-import { FaArrowCircleRight } from 'react-icons/fa';
 
 import styled from '@emotion/styled';
 import NoStyleLink from '../../Links/NoStyleLink';
+import ArrowSvg from './ArrowSvg';
+
+const Link = styled(NoStyleLink)`
+  margin-right: 1rem;
+  & span {
+    font-weight: 700;
+  }
+`;
 
 const Container = styled.div`
   background: ${props => props.theme.colors.white};
@@ -18,19 +25,13 @@ const Container = styled.div`
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
     width: 100%;
   }
-`;
 
-const Link = styled(NoStyleLink)`
-  margin-right: 1rem;
-  & span {
-    font-weight: 700;
+  &:hover {
+    ${Link} {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
-`;
-
-const Icon = styled(FaArrowCircleRight)`
-  font-size: 3rem;
-  color: ${props => props.theme.colors.primaryLight};
-  transform: rotate(-45deg);
 `;
 
 export const LinkCard1 = () => {
@@ -39,7 +40,62 @@ export const LinkCard1 = () => {
       <Link to="#">
         Integrate with <span> Butterify </span>{' '}
       </Link>
-      <Icon />
+      <ArrowSvg />
+    </Container>
+  );
+};
+
+export const LinkCard2 = () => {
+  return (
+    <Container>
+      <Link to="#">
+        Integrate with <span> Ghoster </span>{' '}
+      </Link>
+      <ArrowSvg />
+    </Container>
+  );
+};
+
+export const LinkCard3 = () => {
+  return (
+    <Container>
+      <Link to="#">
+        Integrate with <span> Hooli </span>{' '}
+      </Link>
+      <ArrowSvg />
+    </Container>
+  );
+};
+
+export const LinkCard4 = () => {
+  return (
+    <Container>
+      <Link to="#">
+        Integrate with <span> New View </span>{' '}
+      </Link>
+      <ArrowSvg />
+    </Container>
+  );
+};
+
+export const LinkCard5 = () => {
+  return (
+    <Container>
+      <Link to="#">
+        Integrate with <span> Ponder </span>{' '}
+      </Link>
+      <ArrowSvg />
+    </Container>
+  );
+};
+
+export const LinkCard6 = () => {
+  return (
+    <Container>
+      <Link to="#">
+        Integrate with <span> MoonBox </span>{' '}
+      </Link>
+      <ArrowSvg />
     </Container>
   );
 };

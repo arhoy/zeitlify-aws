@@ -34,7 +34,7 @@ const Button = styled(ButtonSweepToRight)`
   border-radius: 1rem;
 `;
 
-export const Section8 = () => {
+export const Section7 = () => {
   return (
     <SectionWhiteToGrey>
       <Container>

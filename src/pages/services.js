@@ -12,6 +12,7 @@ import { Section3 } from '../components/_servicesPage/Section3/Section3';
 import { Section4 } from '../components/_servicesPage/Section4/Section4';
 import { Section5 } from '../components/_servicesPage/Section5/Section5';
 import { Section6 } from '../components/_servicesPage/Section6/Section6';
+import { Section7 } from '../components/_servicesPage/Section7/Section7';
 
 export const query = graphql`
   query {
@@ -52,6 +53,9 @@ const ServicesPage = ({ data }) => {
       </Fade>
       <Fade bottom>
         <Section6 />
+      </Fade>
+      <Fade bottom>
+        <Section7 />
       </Fade>
     </Layout>
   );

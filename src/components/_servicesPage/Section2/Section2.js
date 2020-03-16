@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Section, Container1200 } from '../../reusableStyles/sections/Sections';
-import { Card1 } from './InfoCards';
+import { Card1, Card2, Card3, Card4 } from './InfoCards';
 
 const Container = styled(Container1200)`
   display: flex;
@@ -19,9 +19,9 @@ export const Section2 = () => {
     <CustomSection>
       <Container>
         <Card1 />
-        <Card1 />
-        <Card1 />
-        <Card1 />
+        <Card2 />
+        <Card3 />
+        <Card4 />
       </Container>
     </CustomSection>
   );

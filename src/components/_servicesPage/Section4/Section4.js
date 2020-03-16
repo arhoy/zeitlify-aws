@@ -5,7 +5,15 @@ import { Section, Container1200 } from '../../reusableStyles/sections/Sections';
 
 import BackgroundSvgTop from './BackgroundSvgTop';
 import BackgroundSvgBottom from './BackgroundSvgBottom';
-import { LinkCard1 } from './LinkCards';
+
+import {
+  LinkCard1,
+  LinkCard2,
+  LinkCard3,
+  LinkCard4,
+  LinkCard5,
+  LinkCard6,
+} from './LinkCards';
 import { H2 } from '../../reusableStyles/typography/Typography';
 import NoStyleLink from '../../Links/NoStyleLink';
 const CustomSection = styled(Section)`
@@ -84,11 +92,11 @@ export const Section4 = () => {
 
       <Container>
         <LinkCard1 />
-        <LinkCard1 />
-        <LinkCard1 />
-        <LinkCard1 />
-        <LinkCard1 />
-        <LinkCard1 />
+        <LinkCard2 />
+        <LinkCard3 />
+        <LinkCard4 />
+        <LinkCard5 />
+        <LinkCard6 />
       </Container>
       <LinkContainer>
         <ContactLink>Talk to an Integration Specialist</ContactLink>
