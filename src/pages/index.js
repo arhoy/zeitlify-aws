@@ -1,8 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+
 import Fade from 'react-reveal/Fade';
 
 import Layout from '../components/layouts/Layout';
+import SEO from '../hooks/SEO';
 
 import { Section0 } from '../components/_homePage/Section0/Section0';
 import { Section1 } from '../components/_homePage/Section1/Section1';
@@ -44,6 +46,11 @@ export const query = graphql`
 const IndexPage = ({ data }) => {
   return (
     <Layout full={true}>
+      <SEO
+        title="Zeitlify | Automation Redefined"
+        description="Zeitlify is a made up automation company under the parent company of Aquasar Inc a Web Development Agency in Edmonton Canada"
+      />
+
       {/* Cover Section */}
       <Section0 />
 

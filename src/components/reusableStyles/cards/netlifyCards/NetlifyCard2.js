@@ -87,7 +87,7 @@ const NetlifyCard2 = ({ title, subtitle, blurb, link, linkURL, picture }) => {
         </Link>
       </ContentContainer>
       <PictureContainer>
-        <CardImage fluid={picture}></CardImage>
+        {picture && <CardImage fluid={picture}></CardImage>}
       </PictureContainer>
     </Container>
   );

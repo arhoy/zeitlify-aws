@@ -5,12 +5,13 @@ import Fade from 'react-reveal/Fade';
 import Layout from '../components/layouts/Layout';
 import SEO from '../hooks/SEO';
 
-import { Section0 } from '../components/_aboutPage/Section0/Section0';
-import { Section1 } from '../components/_aboutPage/Section1/Section1';
-import { Section2 } from '../components/_aboutPage/Section2/Section2';
-import { Section3 } from '../components/_aboutPage/Section3/Section3';
-import { Section4 } from '../components/_aboutPage/Section4/Section4';
-import { Section5 } from '../components/_aboutPage/Section5/Section5';
+import { Section0 } from '../components/_servicesPage/Section0/Section0';
+import { Section1 } from '../components/_servicesPage/Section1/Section1';
+import { Section2 } from '../components/_servicesPage/Section2/Section2';
+import { Section3 } from '../components/_servicesPage/Section3/Section3';
+import { Section4 } from '../components/_servicesPage/Section4/Section4';
+import { Section5 } from '../components/_servicesPage/Section5/Section5';
+import { Section6 } from '../components/_servicesPage/Section6/Section6';
 
 export const query = graphql`
   query {
@@ -24,17 +25,16 @@ export const query = graphql`
   }
 `;
 
-const AboutPage = ({ data }) => {
+const ServicesPage = ({ data }) => {
   return (
     <Layout full={true}>
       <SEO
-        title="About Us | Zeitlify"
+        title="Our Services | Zeitlify"
         description="Zeitlify is a made up automation company under the parent company of Aquasar Inc a Web Development Agency in Edmonton Canada. Here is some information about our company and founder"
         pathname="about"
       />
-      <Fade bottom>
-        <Section0 fluid={data.aboutImage1.childImageSharp.fluid} />
-      </Fade>
+
+      <Section0 fluid={data.aboutImage1.childImageSharp.fluid} />
       <Fade bottom>
         <Section1 />
       </Fade>
@@ -50,8 +50,11 @@ const AboutPage = ({ data }) => {
       <Fade bottom>
         <Section5 fluid={data.aboutImage1.childImageSharp.fluid} />
       </Fade>
+      <Fade bottom>
+        <Section6 />
+      </Fade>
     </Layout>
   );
 };
 
-export default AboutPage;
+export default ServicesPage;

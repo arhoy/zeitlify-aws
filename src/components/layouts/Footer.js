@@ -10,6 +10,7 @@ import NoStyleLink from '../Links/NoStyleLink';
 const d = new Date().getFullYear();
 
 const FooterStyle = styled.div`
+  z-index: 10;
   background: ${props => props.theme.colors.lightgrey};
   margin: 0 auto;
   padding: 2rem;
