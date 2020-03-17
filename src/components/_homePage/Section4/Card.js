@@ -4,8 +4,6 @@ import Img from 'gatsby-image';
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-  max-width: 80rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;

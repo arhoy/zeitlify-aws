@@ -11,14 +11,14 @@ import 'slick-carousel/slick/slick-theme.css';
 
 // real global scss styles
 import '../../scss/main.scss';
-
-import Footer from './Footer';
+import { Footer } from './Footer/Footer';
 
 const theme = {
   colors: {
     primary: '#244F9B',
     primaryDark: '#002F74',
     primaryLight: '#5196FF',
+    primaryLight2: 'rgba(81, 150, 255, 0.90)',
     secondaryVeryLight: '#d2f7f2',
     secondary: 'rgb(24, 163, 201)',
     lightgrey: 'rgb(240,240,240)',
@@ -44,6 +44,7 @@ const theme = {
   screenSize: {
     mobileL: '600px',
     mobileVS: '300px',
+    fourFifty: '450px',
     eightHundred: '800px',
     nineHundred: '900px',
     oneThousand: '1000px',
@@ -166,7 +167,7 @@ Layout.propTypes = {
   full: PropTypes.bool,
 };
 Layout.defaultProps = {
-  full: false,
+  full: true,
 };
 
 export default Layout;

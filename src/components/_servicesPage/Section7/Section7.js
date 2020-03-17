@@ -4,6 +4,10 @@ import { ButtonSweepToRight } from '../../reusableStyles/buttons/Button';
 import { H2 } from '../../reusableStyles/typography/Typography';
 import { SectionWhiteToGrey } from '../../reusableStyles/sections/Sections';
 
+const CustomSection = styled(SectionWhiteToGrey)`
+  padding-bottom: 12rem;
+`;
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,7 +40,7 @@ const Button = styled(ButtonSweepToRight)`
 
 export const Section7 = () => {
   return (
-    <SectionWhiteToGrey>
+    <CustomSection>
       <Container>
         <TitleContainer>
           <Title>Ready For Automation?</Title>
@@ -44,6 +48,6 @@ export const Section7 = () => {
         </TitleContainer>
         <Button>Start For Free</Button>
       </Container>
-    </SectionWhiteToGrey>
+    </CustomSection>
   );
 };

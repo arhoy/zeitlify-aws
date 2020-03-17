@@ -1,22 +1,19 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import { SectionGreyToWhite } from '../../reusableStyles/sections/Sections';
+import { Section, Container1000 } from '../../reusableStyles/sections/Sections';
 
 import { H2 } from '../../reusableStyles/typography/Typography';
 import Card from './Card';
 
-const H2Centered = styled(H2)`
-  text-align: center;
-  font-size: 4rem;
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
 `;
 
-const CardContainer = styled.div`
-  padding: 4rem 2rem;
-  & > div {
-    margin: 6rem auto;
-  }
-`;
+const CardContainer = styled(Container1000)``;
+
 export const Section4 = () => {
   const data = useStaticQuery(graphql`
     {
@@ -45,8 +42,11 @@ export const Section4 = () => {
   `);
 
   return (
-    <SectionGreyToWhite>
-      <H2Centered> Go Above and Beyond</H2Centered>
+    <Section>
+      <TitleContainer>
+        <H2> Go Above and Beyond</H2>
+      </TitleContainer>
+
       <CardContainer>
         <Card
           title="Fundamental Robotic Process Automation"
@@ -65,6 +65,6 @@ export const Section4 = () => {
           fluid={data.image3.childImageSharp.fluid}
         />
       </CardContainer>
-    </SectionGreyToWhite>
+    </Section>
   );
 };

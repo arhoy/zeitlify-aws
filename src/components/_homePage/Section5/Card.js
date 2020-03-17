@@ -25,7 +25,8 @@ const Blurb = styled.p`
 const StyledImage = styled(Img)`
   width: 20rem;
   height: 20rem;
-  margin: 0 auto;
+  margin: auto;
+  margin-bottom: 1rem;
 `;
 
 export const Card = ({ title, blurb, fixed }) => {

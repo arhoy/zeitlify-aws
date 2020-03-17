@@ -28,7 +28,6 @@ const H2Centered = styled(H2)`
   text-align: center;
   color: inherit;
   font-weight: bold;
-  font-size: 4rem;
 `;
 
 const Container = styled.div`
@@ -44,14 +43,19 @@ const Container = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  padding: 4rem 0;
   text-align: center;
 `;
 
 const Button = styled(ButtonSweepToRight)`
   color: ${props => props.theme.colors.white};
   z-index: 10;
-  font-size: 2.3rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+`;
+
+const ExtraPaddingBottom = styled.div`
+  width: 100%;
+  height: 8rem;
 `;
 
 export const Section5 = () => {
@@ -104,6 +108,7 @@ export const Section5 = () => {
       <ButtonContainer>
         <Button>Get Started Today</Button>
       </ButtonContainer>
+      <ExtraPaddingBottom />
       <BackgroundSvg />
     </CustomSection>
   );
