@@ -7,7 +7,7 @@ import { H2 } from '../../reusableStyles/typography/Typography';
 
 import { ButtonSweepToRight } from '../../reusableStyles/buttons/Button';
 import { Section } from '../../reusableStyles/sections/Sections';
-import BackgroundSvg from './BackgroundSvg';
+import BackgroundSvg5 from './BackgroundSvg5';
 
 const CustomSection = styled(Section)`
   position: relative;
@@ -110,7 +110,7 @@ export const Section5 = () => {
         <Button>Get Started Today</Button>
       </ButtonContainer>
       <ExtraPaddingBottom />
-      <BackgroundSvg />
+      <BackgroundSvg5 />
     </CustomSection>
   );
 };

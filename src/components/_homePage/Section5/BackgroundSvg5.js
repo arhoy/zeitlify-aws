@@ -16,7 +16,7 @@ const SVG = styled.svg`
   }
 `;
 
-const BackgroundSvg = () => (
+const BackgroundSvg5 = () => (
   <SVG
     id="Layer_1"
     data-name="Layer 1"
@@ -27,4 +27,4 @@ const BackgroundSvg = () => (
   </SVG>
 );
 
-export default BackgroundSvg;
+export default BackgroundSvg5;
