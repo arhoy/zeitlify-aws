@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { HeroBlurb } from './HeroBlurb';
 
 import { Section } from '../../reusableStyles/sections/Sections';
-import BackgroundSvg from './BackgroundSvg';
+import BackgroundSvg from './BackgroundSVG';
 
 const CustomSection = styled(Section)`
   position: relative;

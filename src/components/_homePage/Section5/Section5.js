@@ -4,9 +4,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { Card } from './Card';
 import { H2 } from '../../reusableStyles/typography/Typography';
-import BackgroundSvg from './BackgroundSvg';
+
 import { ButtonSweepToRight } from '../../reusableStyles/buttons/Button';
 import { Section } from '../../reusableStyles/sections/Sections';
+import BackgroundSvg from './BackgroundSvg';
 
 const CustomSection = styled(Section)`
   position: relative;
