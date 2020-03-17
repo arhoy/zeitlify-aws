@@ -86,7 +86,6 @@ export const MailChimpFooter = () => {
     setError(false);
     const result = await addToMailchimp(email);
 
-    console.log('result is ', result);
     if (result.result === 'error') {
       setError(true);
       setMessage('Sorry, invalid email or already subscribed!');
@@ -96,8 +95,6 @@ export const MailChimpFooter = () => {
       setEmail('');
     }
   };
-
-  console.log('email is', email);
 
   return (
     <Container onSubmit={handleSubmit}>
