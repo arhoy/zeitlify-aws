@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production') {
   URL = 'http://localhost:8000';
 }
 
-const queries = require('./src/utils/algolia');
+// const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
@@ -32,16 +32,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-emotion`,
     },
-    {
-      resolve: 'gatsby-plugin-algolia',
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries,
-        chunkSize: 10000,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-algolia',
+    //   options: {
+    //     appId: process.env.GATSBY_ALGOLIA_APP_ID,
+    //     apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
+    //     indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+    //     queries,
+    //     chunkSize: 10000,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -102,31 +102,31 @@ module.exports = {
         endpoint: process.env.MAILCHIMP_ENDPOINT,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        // head: false,
-        // // Setting this parameter is optional
-        // anonymize: true,
-        // // Setting this parameter is also optional
-        // respectDNT: true,
-        // // Avoids sending pageview hits from custom paths
-        // exclude: ['/preview/**', '/do-not-track/me/too/'],
-        // // Delays sending pageview hits on route update (in milliseconds)
-        // pageTransitionDelay: 0,
-        // // Enables Google Optimize using your container Id
-        // // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-        // // // Enables Google Optimize Experiment ID
-        // // experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
-        // // // Set Variation ID. 0 for original 1,2,3....
-        // // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
-        // // Any additional optional fields
-        // sampleRate: 5,
-        // siteSpeedSampleRate: 10,
-        // cookieDomain: 'aquasar.io',
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
+    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
+    //     // head: false,
+    //     // // Setting this parameter is optional
+    //     // anonymize: true,
+    //     // // Setting this parameter is also optional
+    //     // respectDNT: true,
+    //     // // Avoids sending pageview hits from custom paths
+    //     // exclude: ['/preview/**', '/do-not-track/me/too/'],
+    //     // // Delays sending pageview hits on route update (in milliseconds)
+    //     // pageTransitionDelay: 0,
+    //     // // Enables Google Optimize using your container Id
+    //     // // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+    //     // // // Enables Google Optimize Experiment ID
+    //     // // experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+    //     // // // Set Variation ID. 0 for original 1,2,3....
+    //     // // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+    //     // // Any additional optional fields
+    //     // sampleRate: 5,
+    //     // siteSpeedSampleRate: 10,
+    //     // cookieDomain: 'aquasar.io',
+    //   },
+    // },
   ],
 };
