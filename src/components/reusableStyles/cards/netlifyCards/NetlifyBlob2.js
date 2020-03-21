@@ -1,17 +1,17 @@
 import React from 'react';
 
 import styled from '@emotion/styled';
+import { FaChartBar, FaCode, FaCodeBranch, FaChessKing } from 'react-icons/fa';
 
-import blobshape from '../../../../../images/svg/blob-shape-2.svg';
 import CirclularNumbers from '../../numbers/CirclularNumbers';
 
-import { FaChartBar, FaCode, FaCodeBranch, FaChessKing } from 'react-icons/fa';
+import Blob2 from './blobShapes/BlobShape2';
 
 const Container = styled.div``;
 
 const SubContainer = styled.div`
   z-index: 0;
-  background: url(${blobshape}) no-repeat center;
+
   width: 30rem;
   height: 25rem;
   display: flex;
@@ -97,6 +97,7 @@ const NetlifyBlob2 = () => {
             Conquer <ChessKingIcon />
           </li>
         </UL>
+        <Blob2 />
       </SubContainer>
     </Container>
   );

@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 import blobshape from '../../../../../images/svg/blob-shape-3.svg';
 import CirclularNumbers from '../../numbers/CirclularNumbers';
+import Blob3 from './blobShapes/BlobShap3';
 
 const Container = styled.div``;
 
@@ -69,6 +70,7 @@ const NetlifyBlob3 = () => {
             <li> Optimizing data and deploying </li>
           </ul>
         </CodeBlob>
+        <Blob3 />
       </SubContainer>
     </Container>
   );

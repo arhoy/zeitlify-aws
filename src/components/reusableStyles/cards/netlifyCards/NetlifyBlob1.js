@@ -1,17 +1,16 @@
 import React from 'react';
-
 import styled from '@emotion/styled';
 
-import blobshape from '../../../../../images/svg/blob-shape-1.svg';
 import CirclularNumbers from '../../numbers/CirclularNumbers';
 
 import { FaGithub, FaBitbucket, FaGitlab } from 'react-icons/fa';
+import Blob1 from './blobShapes/BlobShape1';
 
 const Container = styled.div``;
 
 const SubContainer = styled.div`
+  position: relative;
   z-index: 0;
-  background: url(${blobshape}) no-repeat center;
   width: 30rem;
   height: 25rem;
   display: flex;
@@ -84,6 +83,7 @@ const NetlifyBlob1 = () => {
             <GitlabIcon /> GitLove
           </li>
         </UL>
+        <Blob1 />
       </SubContainer>
     </Container>
   );

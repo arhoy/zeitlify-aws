@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+
 import NetlifyBlob1 from '../../reusableStyles/cards/netlifyCards/NetlifyBlob1';
 import { Section } from '../../reusableStyles/sections/Sections';
 import { H2 } from '../../reusableStyles/typography/Typography';
