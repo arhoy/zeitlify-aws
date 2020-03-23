@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
-import { MobileMenu } from './mobileMenu';
+import { MobileMenu } from './MobileMenu';
 import NoStyleLink from '../../Links/NoStyleLink';
 import { BurgerSVG3 } from './Burger3';
 
