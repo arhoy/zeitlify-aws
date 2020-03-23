@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-
 import { Link } from 'gatsby';
-
-import { FaAlignRight } from 'react-icons/fa';
-
 import styled from '@emotion/styled';
 
-import { MobileMenu1 } from '../menus/mobileMenu1';
+import { MobileMenu } from './mobileMenu';
+import NoStyleLink from '../../Links/NoStyleLink';
+import { BurgerSVG3 } from './Burger3';
 
-import NoStyleLink from '../Links/NoStyleLink';
-
-import '../../scss/menu_hovers/menuhover.scss';
+import '../../../scss/menu_hovers/menuhover.scss';
 
 const Header = styled.header`
   position: relative;
@@ -33,25 +29,13 @@ const LogoLink = styled(Link)`
   margin: 0;
 `;
 const Logo = styled.span`
+  z-index: 100;
   & ${LogoLink} {
     text-decoration: none !important;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3.9rem;
     letter-spacing: 4px;
     color: ${props => props.theme.colors.white};
-  }
-`;
-
-const LogoSpan2 = styled.span`
-  font-size: 4.5rem;
-`;
-
-const BurgerIcon = styled(FaAlignRight)`
-  cursor: pointer;
-  color: inherit;
-  font-size: 3rem;
-  @media (min-width: ${props => props.theme.screenSize.mobileL}) {
-    display: none;
   }
 `;
 
@@ -97,6 +81,20 @@ const CustomLink = styled(NoStyleLink)`
   }
 `;
 
+const BurgerIconContainer = styled.div`
+  z-index: 100;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: ${props => props.theme.screenSize.mobileL}) {
+    display: none;
+  }
+`;
+
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenu] = useState(false);
 
@@ -105,37 +103,34 @@ const Nav = () => {
   };
 
   return (
-    <Header>
-      <HeaderTop>
-        <Logo>
-          <LogoLink to="/">
-            <LogoSpan2>Z</LogoSpan2>eitlify
-          </LogoLink>
-        </Logo>
+    <>
+      <Header>
+        <HeaderTop>
+          <Logo>
+            <LogoLink to="/">ZEITLIFY</LogoLink>
+          </Logo>
 
-        <MenuLinks>
-          <CustomLink className="underline" to="/about">
-            About
-          </CustomLink>
-          <CustomLink className="underline" to="/services">
-            Services
-          </CustomLink>
-          <CustomLink className="underline" to="/blog">
-            Blog
-          </CustomLink>
-          <CustomLink className="underline" to="/contact">
-            Contact
-          </CustomLink>
-        </MenuLinks>
-
-        <BurgerIcon onClick={mobileMenuHandler} />
-
-        <MobileMenu1
-          display={mobileMenuOpen.toString()}
-          mobileMenuHandler={mobileMenuHandler}
-        />
-      </HeaderTop>
-    </Header>
+          <MenuLinks>
+            <CustomLink className="underline" to="/about">
+              About
+            </CustomLink>
+            <CustomLink className="underline" to="/services">
+              Services
+            </CustomLink>
+            <CustomLink className="underline" to="/blog">
+              Blog
+            </CustomLink>
+            <CustomLink className="underline" to="/contact">
+              Contact
+            </CustomLink>
+          </MenuLinks>
+          <BurgerIconContainer onClick={mobileMenuHandler}>
+            <BurgerSVG3 open={mobileMenuOpen.toString()} />
+          </BurgerIconContainer>
+        </HeaderTop>
+      </Header>
+      {mobileMenuOpen && <MobileMenu />}
+    </>
   );
 };
 

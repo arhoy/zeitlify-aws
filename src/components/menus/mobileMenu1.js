@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from '@emotion/styled';
-import { FaTimes } from 'react-icons/fa';
+
 import NoStyleLink from '../Links/NoStyleLink';
 
 const ModalBackground = styled.div`
@@ -27,48 +27,28 @@ const MobileMenuContainer = styled.div`
   background: ${props => props.theme.colors.white};
   visibility: ${props => (props.display !== 'false' ? 'block' : 'hidden')};
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 0;
   position: fixed;
   font-size: 2.2rem;
   top: 0;
   right: ${props => (props.display !== 'false' ? '0' : '-100%')};
-  width: 80%;
 `;
 
 const LinkContainerUl = styled.ul`
+  padding: 80px 0;
   list-style: none;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 const LinkWrapper = styled.li`
   padding: 1rem;
   border-bottom: 2px solid black;
-`;
-
-const CloseIcon = styled(FaTimes)`
-  font-size: 3rem;
-  margin-right: 4px;
-  cursor: pointer;
-  transition: all 0.4s ease-in;
-  &:hover {
-    transform: rotateZ(90deg);
-  }
-`;
-
-const CloseIconContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  color: ${props => props.theme.colors.black};
-  background: ${props => props.theme.colors.lightgrey};
-  padding: 1rem 1rem;
 `;
 
 const StyledLink = styled(NoStyleLink)`
@@ -78,7 +58,7 @@ const StyledLink = styled(NoStyleLink)`
 
   transition: all 0.25s;
 
-  text-align: right;
+  text-align: left;
   &:hover {
     background-image: linear-gradient(
       0deg,
@@ -93,10 +73,6 @@ export const MobileMenu1 = ({ mobileMenuHandler, display }) => {
     <>
       <ModalBackground display={display} onClick={mobileMenuHandler} />
       <MobileMenuContainer display={display}>
-        <CloseIconContainer>
-          <CloseIcon onClick={mobileMenuHandler} />
-        </CloseIconContainer>
-
         <LinkContainerUl>
           <LinkWrapper>
             <StyledLink to="/about"> About </StyledLink>

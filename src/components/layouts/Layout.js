@@ -1,9 +1,12 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
-import Nav from './Nav';
+
 import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+
+import Nav from './Navigation/Nav';
+import { Footer } from './Footer/Footer';
 
 // React Slick CSS
 import 'slick-carousel/slick/slick.css';
@@ -11,7 +14,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 // real global scss styles
 import '../../scss/main.scss';
-import { Footer } from './Footer/Footer';
 
 const theme = {
   colors: {
@@ -118,6 +120,7 @@ const Layout = ({ children, full, backgroundLayer }) => {
           }
 
           body {
+            position: relative;
             background: ${white};
 
             overflow-x: hidden;
