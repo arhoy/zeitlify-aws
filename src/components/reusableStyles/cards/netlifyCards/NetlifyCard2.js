@@ -5,6 +5,7 @@ import Image from 'gatsby-image';
 import NoStyleLink from '../../../Links/NoStyleLink';
 
 const Container = styled.div`
+  background: ${props => props.theme.colors.white};
   border-radius: 1rem;
   box-shadow: 5px 5px 25px rgba(118, 118, 118, 0.15);
   display: grid;
