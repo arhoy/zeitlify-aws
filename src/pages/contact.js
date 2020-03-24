@@ -1,21 +1,13 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
 import { graphql } from 'gatsby';
 import SEO from '../hooks/SEO';
 
-import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
 import Layout from '../components/layouts/Layout';
-
-import {
-  H1,
-  H2,
-  A,
-} from '../components/reusableStyles/typography/Typography.js';
-import Hero from '../components/heros/Hero.js';
-import { Section } from '../components/reusableStyles/sections/Sections.js';
-import { ButtonStyle2 } from '../components/reusableStyles/buttons/Button';
-import ContactBox from '../components/contactPage/ContactBox';
+import { Section0 } from '../components/_contactPage/Section0/Section0';
+import { Section1 } from '../components/_contactPage/Section1/Section1';
+import { Section2 } from '../components/_contactPage/Section2/Section2';
+import { Section3 } from '../components/_contactPage/Section3/Section3';
 
 export const query = graphql`
   {
@@ -26,74 +18,36 @@ export const query = graphql`
         }
       }
     }
+    imageCard1: file(relativePath: { eq: "_contact/procrast.png" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 300) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `;
-
-const CustomH1 = styled(H1)`
-  display: inline;
-  background-image: linear-gradient(
-    0deg,
-    ${props => props.theme.colors.primaryVeryLight} 50%,
-    transparent 50%
-  );
-`;
-
-const CustomH2 = styled(H2)`
-  color: ${props => props.theme.colors.black};
-`;
-
-const P = styled.p`
-  margin-bottom: 2rem;
-`;
-
-const Div = styled.div`
-  margin: 4rem 0;
-  & span {
-    background-image: linear-gradient(
-      0deg,
-      ${props => props.theme.colors.primaryVeryLight} 50%,
-      transparent 50%
-    );
-  }
-`;
-
-const CustomButton = styled(ButtonStyle2)``;
 
 const contact = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Contact Us for your Website Development needs in Edmonton"
-        description="Contact your Edmonton Professional Gatsby Web Developer, SEO and Facebook Ads"
+        title="Contact Us | Zeitlify"
+        description="At Zeitlify we are here to discuss your next automation project"
         pathname="contact"
         image={data.seo.childImageSharp.fluid.src}
       />
-      <Section>
-        <CustomH1>Contact Page</CustomH1>
-        <P>
-          We want to help grow your online business. Web Developer specializing
-          in Gastby, Ecommerce, SEO and Online Advertising
-        </P>
+      {/* Talk to our experts */}
+      <Section0 />
 
-        <Div>
-          <CustomH2>
-            Schedule on <span>Appointment</span> with Us
-          </CustomH2>
-          <CustomButton>
-            <A
-              href="https://calendly.com/aquasar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Schedule A Time
-            </A>
-          </CustomButton>
-        </Div>
-        <ContactBox text={`Leave Us a Message Below`} />
+      {/* Reach our Sales Team  */}
+      <Section1 />
 
-        <SimpleNetlifyForm />
-        <Hero />
-      </Section>
+      {/* Our Stats */}
+      <Section2 />
+
+      {/* Netlify Card */}
+      <Section3 fluid={data.imageCard1.childImageSharp.fluid} />
     </Layout>
   );
 };

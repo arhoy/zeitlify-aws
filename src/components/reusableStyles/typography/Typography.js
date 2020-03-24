@@ -26,6 +26,16 @@ const H3 = styled.h3`
   );
 `;
 
+const H4 = styled.h4`
+  font-size: 2.2rem;
+  font-weight: 400;
+`;
+
+const H5 = styled.h5`
+  font-size: 2rem;
+  font-weight: 400;
+`;
+
 const A = styled.a`
   color: ${props => props.theme.colors.black};
   text-decoration: none;
@@ -49,4 +59,4 @@ const Span = styled.span``;
 
 const P = styled.p``;
 
-export { H1, H2, H3, A, Li, Ul, Span, Bold, P };
+export { H1, H2, H3, H4, H5, A, Li, Ul, Span, Bold, P };

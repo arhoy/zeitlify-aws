@@ -6,8 +6,11 @@ const Section = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   padding: 8rem 4rem;
-  @media (max-width: ${props => props.theme.screenSize.mobileVS}) {
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     padding: 6rem 2rem;
+  }
+  @media (max-width: ${props => props.theme.screenSize.mobileVS}) {
+    padding: 5rem 2rem;
   }
 `;
 

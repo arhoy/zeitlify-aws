@@ -51,6 +51,7 @@ const theme = {
     nineHundred: '900px',
     oneThousand: '1000px',
     oneThousandAndFifty: '1050px',
+    twelveHundred: '1200px',
     twoThousand: '2000px',
     fourTwentyFive: '425px',
   },
@@ -119,10 +120,11 @@ const Layout = ({ children, full, backgroundLayer }) => {
             margin: 0;
           }
 
-          body {
+          body,
+          html {
             position: relative;
             background: ${white};
-
+            max-width: 100%;
             overflow-x: hidden;
             width: 100%;
             margin: 0;
