@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { graphql } from 'gatsby';
+
 import SEO from '../hooks/SEO';
 
 import Layout from '../components/layouts/Layout';

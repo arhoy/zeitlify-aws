@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Zoom from 'react-reveal/Zoom';
 import { H4 } from '../../reusableStyles/typography/Typography';
 import { ContactForm } from './ContactForm';
 
@@ -15,13 +16,15 @@ const Container = styled.div`
 
 export const Contact = () => {
   return (
-    <Container>
-      <H4> Reach Our Sales Team </H4>
-      <p>
-        If you are already a customer, please reach out to your dedicated
-        account representative
-      </p>
-      <ContactForm />
-    </Container>
+    <Zoom>
+      <Container>
+        <H4> Reach Our Sales Team </H4>
+        <p>
+          If you are already a customer, please reach out to your dedicated
+          account representative
+        </p>
+        <ContactForm />
+      </Container>
+    </Zoom>
   );
 };

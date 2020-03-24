@@ -1,6 +1,7 @@
 import React from 'react';
-
+import Fade from 'react-reveal/Fade';
 import styled from '@emotion/styled';
+import { FaDownload } from 'react-icons/fa';
 
 const Container = styled.div`
   display: flex;
@@ -33,52 +34,60 @@ const Blurb = styled.div`
 
 export const OurStats1 = () => {
   return (
-    <Container>
-      <Stat>
-        <span>12</span>
-      </Stat>
-      <Blurb>
-        <p>Data Servers</p>
-      </Blurb>
-    </Container>
+    <Fade left>
+      <Container>
+        <Stat>
+          <span>12</span>
+        </Stat>
+        <Blurb>
+          <p>Data Servers</p>
+        </Blurb>
+      </Container>
+    </Fade>
   );
 };
 
 export const OurStats2 = () => {
   return (
-    <Container>
-      <Stat>
-        <span>99.97%</span>
-      </Stat>
-      <Blurb>
-        <p>Service Uptime</p>
-      </Blurb>
-    </Container>
+    <Fade bottom>
+      <Container>
+        <Stat>
+          <span>99.97%</span>
+        </Stat>
+        <Blurb>
+          <p>Service Uptime</p>
+        </Blurb>
+      </Container>
+    </Fade>
   );
 };
 
 export const OurStats3 = () => {
   return (
-    <Container>
-      <Stat>
-        <span>30</span>
-      </Stat>
-      <Blurb>
-        <p>Fortune 500 Companies</p>
-      </Blurb>
-    </Container>
+    <Fade top>
+      <Container>
+        <Stat>
+          <span>30</span>
+        </Stat>
+        <Blurb>
+          <p>Fortune 500 Companies</p>
+        </Blurb>
+      </Container>
+    </Fade>
   );
 };
 
 export const OurStats4 = () => {
   return (
-    <Container>
-      <Stat>
-        <span>10M</span>
-      </Stat>
-      <Blurb>
-        <p>Automation Workflows</p>
-      </Blurb>
-    </Container>
+    <Fade right>
+      <Container>
+        <Stat>
+          <span>10M</span>
+        </Stat>
+        <Blurb>
+          <p>Automation Workflows</p>
+        </Blurb>
+      </Container>
+    </Fade>
   );
 };
