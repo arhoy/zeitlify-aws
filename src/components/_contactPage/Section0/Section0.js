@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { Section } from '../../reusableStyles/sections/Sections';
-import BackgroundSvg from './BackgroundSVG';
+import BackgroundSvg from './BackgroundSvg';
 import { ContactBlurb } from './ContactBlurb';
 
 const CustomSection = styled(Section)`
