@@ -8,7 +8,6 @@ import aws_exports from '../aws-exports';
 
 import Layout from '../components/layouts/Layout';
 
-import FormBasic from '../components/_app/Forms/FormBasic';
 import {
   Section,
   Container1200,
@@ -21,12 +20,12 @@ const myFederatedConfig = {
   facebook_app_id: '199713708139956', // Enter your facebook_app_id here
 };
 
-const AppPage = () => {
+const AppPage = props => {
   return (
     <Layout>
       <Section>
         <Container1200>
-          <NoteTaker />
+          <NoteTaker owner={props.authData.username} />
         </Container1200>
       </Section>
     </Layout>
