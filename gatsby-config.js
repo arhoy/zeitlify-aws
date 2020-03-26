@@ -97,6 +97,10 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
+    {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: process.env.MAILCHIMP_ENDPOINT,

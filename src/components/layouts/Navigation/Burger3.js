@@ -69,7 +69,7 @@ export const BurgerSVG3 = ({ open }) => {
   }, [open]);
 
   const runBurgerAnimation = () => {
-    if (open == 'false') {
+    if (open === false) {
       menuTl.play();
     } else {
       menuTlClose.play();

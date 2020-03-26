@@ -123,7 +123,6 @@ export const ContactForm = ({ color }) => {
           <input
             onChange={event => setName(event.target.value)}
             placeholder=""
-            style={{ background: `${color}` }}
             type="text"
             name="name"
             required

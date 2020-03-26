@@ -1,7 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import styled from '@emotion/styled';
-import { FaDownload } from 'react-icons/fa';
 
 const Container = styled.div`
   display: flex;

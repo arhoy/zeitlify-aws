@@ -125,7 +125,7 @@ const Nav = () => {
             </CustomLink>
           </MenuLinks>
           <BurgerIconContainer onClick={mobileMenuHandler}>
-            <BurgerSVG3 open={mobileMenuOpen.toString()} />
+            <BurgerSVG3 open={mobileMenuOpen} />
           </BurgerIconContainer>
         </HeaderTop>
       </Header>
