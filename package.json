@@ -79,7 +79,7 @@
     "react-vis": "^1.11.7",
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^5.3.6",
+    "swiper": "^6.5.1",
     "tableau-api": "^2.2.3",
     "theme-ui": "^0.2.43",
     "yup": "^0.28.3"
